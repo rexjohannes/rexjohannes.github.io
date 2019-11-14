@@ -113,6 +113,7 @@ $(document).ready(() => {
       `);
       
       // add field
+      source += `@bot.command\n`;
       source += `embed.add_field(name="${field.name}", value="${field.value}", inline=${(field.inline && 'True') || 'False'})\n`;
     }
 
@@ -124,7 +125,7 @@ $(document).ready(() => {
     }
     
     // add send function
-    source += `await self.bot.say(embed=embed)\n`;
+    source += `await ctx.send(embed=embed)\n`;
     
     // code
     $('.source').text(source);
