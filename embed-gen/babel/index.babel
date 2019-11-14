@@ -113,7 +113,6 @@ $(document).ready(() => {
       `);
       
       // add field
-      source += `@bot.command\n`;
       source += `embed.add_field(name="${field.name}", value="${field.value}", inline=${(field.inline && 'True') || 'False'})\n`;
     }
 
